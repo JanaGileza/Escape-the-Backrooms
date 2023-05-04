@@ -21,6 +21,7 @@ public enum Scenes
 {
     MainMenu,
     Instructions,
+    Credits,
     Game,
     GameOver,
     GameWin

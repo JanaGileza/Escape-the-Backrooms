@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf281f6cdfeb6144bba3069893e7692, type: 3}
   m_Name: Enemy1Data
   m_EditorClassIdentifier: 
-  Name: Enemy1
-  DeathScreenMessage: UR SO OOOO BAD :33333
-  DeathScreenFont: {fileID: 0}
+  Name: WallCrawler
+  DeathScreenMessage: '"You may try to traverse these halls all you wish, but be
+    warned: there are consequences for pillaging these relics of which you do not
+    own. There are forces beyond your meager mind''s comprehension of which you think
+    you see, or think you understand. Hark these words, and may this be the last
+    time you hear them, for as long as you strive to succeed, there will be suffering
+    awaiting you beyond anything you could fathom."'
+  DeathScreenFont: {fileID: 11400000, guid: 792aaf240c72e1343b498f2654d86965, type: 2}
   Speed: 3
   Rarity: 0.5
   DetectionRange: 4.63

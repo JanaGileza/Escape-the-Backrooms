@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf281f6cdfeb6144bba3069893e7692, type: 3}
   m_Name: Enemy2
   m_EditorClassIdentifier: 
-  Name: Enemy2
-  DeathScreenMessage: UR BADDDD :) :3
+  Name: Traveler
+  DeathScreenMessage: ' "You as a mere mortal could not begin to fathom the depths
+    of these confines. Take this preliminary test as a caution. You are not fit for
+    the quest that will be offered to you soon. Do not enter the darkened hallway.
+    Do not look behind you when you walk past it. Do not question the spots in the
+    very outside of your vision when you look in the mirror. Do not think about where
+    your body goes when your subconscious has taken control. Do not embark on the
+    journey you will be offered soon."'
   DeathScreenFont: {fileID: 0}
   Speed: 2.22
   Rarity: 0.286
