@@ -8,6 +8,7 @@ TagManager:
   - RareEnemy
   - target
   - Collectable
+  - Candle
   layers:
   - Default
   - TransparentFX

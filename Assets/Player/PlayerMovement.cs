@@ -37,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
             print("Inventory length: " + itemsCollected.Count);
             Destroy(other.gameObject);
         }
-        //WalkedOverItem = other.gameObject;
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -61,6 +60,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         HandleInput();
+    }
+    
+    public void PickedUpCandle()
+    {
+
     }
 
     private void HandleInput()
