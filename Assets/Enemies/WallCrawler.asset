@@ -20,6 +20,6 @@ MonoBehaviour:
     time you hear them, for as long as you strive to succeed, there will be suffering
     awaiting you beyond anything you could fathom."'
   DeathScreenFont: {fileID: 11400000, guid: 792aaf240c72e1343b498f2654d86965, type: 2}
-  Speed: 3
-  DetectionRange: 24.48
+  Speed: 2
+  DetectionRange: 20
   AlwaysChasePlayer: 0

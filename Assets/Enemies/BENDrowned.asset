@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: BEN Drowned
   DeathScreenMessage: You've met a terrible fate, haven't you?
   DeathScreenFont: {fileID: 11400000, guid: 792aaf240c72e1343b498f2654d86965, type: 2}
-  Speed: 20
+  Speed: 50
   DetectionRange: 100
   AlwaysChasePlayer: 0
