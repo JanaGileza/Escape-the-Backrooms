@@ -21,6 +21,5 @@ MonoBehaviour:
     awaiting you beyond anything you could fathom."'
   DeathScreenFont: {fileID: 11400000, guid: 792aaf240c72e1343b498f2654d86965, type: 2}
   Speed: 3
-  Rarity: 0.5
-  DetectionRange: 25.32
+  DetectionRange: 24.48
   AlwaysChasePlayer: 0

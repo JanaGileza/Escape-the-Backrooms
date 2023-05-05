@@ -22,5 +22,5 @@ MonoBehaviour:
     journey you will be offered soon."'
   DeathScreenFont: {fileID: 0}
   Speed: 3.75
-  DetectionRange: 5.71
+  DetectionRange: 14.4
   AlwaysChasePlayer: 0

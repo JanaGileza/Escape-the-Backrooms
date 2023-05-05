@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -37,19 +38,11 @@ public class PlayerMovement : MonoBehaviour
             print("Inventory length: " + itemsCollected.Count);
             Destroy(other.gameObject);
         }
-    }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        //if(WalkedOverItem == this.gameObject)
-            //WalkedOverItem = null;
-    }
-
-    void PickUpItem()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-            if(WalkedOverItem != null)
-                Destroy(WalkedOverItem);
+        if(other.CompareTag("WinObject"))
+        {
+            CheckForWin();
+        }
     }
 
     void MoveInDirection(Vector2 direction, float speed)
@@ -62,9 +55,12 @@ public class PlayerMovement : MonoBehaviour
         HandleInput();
     }
     
-    public void PickedUpCandle()
+    public void CheckForWin()
     {
-
+        if(itemsCollected.Count >= 5)
+        {
+            SceneManager.LoadScene("GameWin");
+        }
     }
 
     private void HandleInput()
