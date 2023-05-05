@@ -7,6 +7,7 @@ TagManager:
   - NormalEnemy
   - RareEnemy
   - target
+  - Collectable
   layers:
   - Default
   - TransparentFX

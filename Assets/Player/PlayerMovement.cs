@@ -12,8 +12,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 7.5f;
     GameObject WalkedOverItem;
 
+    public List<String> itemsCollected;
+
     void Start()
     {
+        itemsCollected = new List<String>();
     }
 
     //when player collides into an enemy, they will be destroyed, not the enemy
@@ -24,15 +27,23 @@ public class PlayerMovement : MonoBehaviour
     } 
 
     //detecting when player walks over an item to pick it up
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        WalkedOverItem = other.gameObject;
+        if(other.CompareTag("Collectable"))
+        {
+            string itemType = other.gameObject.GetComponent<CollectableScript>().itemType;
+            print("you have collected a " + itemType);
+            itemsCollected.Add(itemType);
+            print("Inventory length: " + itemsCollected.Count);
+            Destroy(other.gameObject);
+        }
+        //WalkedOverItem = other.gameObject;
     }
 
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit2D(Collider2D other)
     {
-        if(WalkedOverItem == this.gameObject)
-            WalkedOverItem = null;
+        //if(WalkedOverItem == this.gameObject)
+            //WalkedOverItem = null;
     }
 
     void PickUpItem()
@@ -45,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     void MoveInDirection(Vector2 direction, float speed)
     {
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
-    }
+    } 
 
     void Update()
     {
@@ -54,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleInput()
     {
+        Vector3 characterScale = transform.localScale;
         horizontalMovement = Input.GetAxisRaw("Horizontal");
         verticalMovement = Input.GetAxisRaw("Vertical");
         Vector2 direction = new Vector2(horizontalMovement, verticalMovement);
@@ -62,5 +74,12 @@ public class PlayerMovement : MonoBehaviour
             MoveInDirection(direction, runSpeed);
         else
             MoveInDirection(direction, movementSpeed);
+
+        if(horizontalMovement < 0)
+            characterScale.x = -2.26f;
+        if(horizontalMovement > 0)
+            characterScale.x = 2.26f;
+
+        transform.localScale = characterScale;
     }
 }

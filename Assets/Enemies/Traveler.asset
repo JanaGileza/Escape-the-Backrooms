@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf281f6cdfeb6144bba3069893e7692, type: 3}
+  m_Name: Traveler
+  m_EditorClassIdentifier: 
+  Name: Traveler
+  DeathScreenMessage: ' "You as a mere mortal could not begin to fathom the depths
+    of these confines. Take this preliminary test as a caution. You are not fit for
+    the quest that will be offered to you soon. Do not enter the darkened hallway.
+    Do not look behind you when you walk past it. Do not question the spots in the
+    very outside of your vision when you look in the mirror. Do not think about where
+    your body goes when your subconscious has taken control. Do not embark on the
+    journey you will be offered soon."'
+  DeathScreenFont: {fileID: 0}
+  Speed: 3.75
+  DetectionRange: 5.71
+  AlwaysChasePlayer: 0

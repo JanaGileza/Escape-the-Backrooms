@@ -10,7 +10,7 @@ public class EnemyData : ScriptableObject
     public TMP_FontAsset DeathScreenFont;
 	[Header("Enemy Danger >:3")]
 	public float Speed;
-	[Range(0,1)] public float Rarity;
+	//[Range(0,1)] public float Rarity;
 	public float DetectionRange;
     public bool AlwaysChasePlayer;
 }
