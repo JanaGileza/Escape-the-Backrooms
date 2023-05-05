@@ -3,26 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 
-public class NewBehaviourScript : MonoBehaviour, IPointerClickHandler
-{
-    public UnityEvent onClick;
+public class GameWin : MonoBehaviour
+{    
+    [SerializeField] string mainMenuScene;
+    [SerializeField] Sprite[] _storySprites;
 
-    public void OnPointerClick(PointerEventData pointerEventData)
+    int _currentImageIndex = 0;
+
+    public void MouseClickListener()
     {
-        Debug.Log(name + " Game Object CLicked!", this);
-        onClick.Invoke();
+        if (Input.GetMouseButtonDown(0))
+        {
+            ReplaceImage();
+        }
     }
+
+    void ReplaceImage(){
+        if(_currentImageIndex < _storySprites.Length)
+        {
+            GetComponent<SpriteRenderer>().sprite = _storySprites[_currentImageIndex];
+            _currentImageIndex++;
+        }
+        else
+        {
+            SceneManager.LoadScene(mainMenuScene);
+        }
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<SpriteRenderer>().sprite = _storySprites[_currentImageIndex];        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        MouseClickListener();
     }
+
 }
