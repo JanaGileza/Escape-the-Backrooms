@@ -33,3 +33,5 @@ https://github.com/user-attachments/assets/474ee350-7833-441c-aa35-4830a9cfd4a5
 
 
 ## How to Play
+[Visit this page](https://janagileza.itch.io/escape-the-backrooms) in order to download and try Escape the Backrooms yourself!
+
